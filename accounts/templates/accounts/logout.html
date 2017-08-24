@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+	<h1>Welcome to Login page!</h1>
+	<p>You have Logged out</p>
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Login</button>
+	</form>
+</div>
+{% endblock %}
